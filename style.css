@@ -1,39 +1,128 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
+/* Google Font (optional but recommended) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #f5f7fb;
+  --card-bg: #ffffff;
+  --primary: #4f46e5;
+  --text: #1f2933;
+  --subtext: #6b7280;
+  --border: #e5e7eb;
+}
+
+/* Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Container */
 .container {
-  width: 90%;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
+/* Headings */
 h1 {
   text-align: center;
-  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 h2 {
-  margin-top: 30px;
-  color: #444;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--primary);
 }
 
+/* Card */
 .card {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 12px 0;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
 }
 
+/* Hover effect */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* Text styling */
+strong {
+  color: var(--primary);
+}
+
+p {
+  color: var(--subtext);
+  margin: 5px 0;
+}
+
+/* Lists */
 ul {
+  margin-top: 8px;
   padding-left: 20px;
 }
 
 li {
-  margin: 5px 0;
+  margin: 6px 0;
+  color: var(--text);
+}
+
+/* Routine highlight */
+.card strong:first-child {
+  font-size: 1.05rem;
+}
+
+/* Section spacing */
+#goal .card {
+  font-size: 1.1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  border: none;
+}
+
+#goal strong {
+  color: white;
+}
+
+/* Scrollbar (modern touch) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
 }
